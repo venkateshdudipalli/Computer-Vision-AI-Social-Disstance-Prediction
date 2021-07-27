@@ -3,10 +3,10 @@ COVID-19 outbreak has created a lot of tension and misery to many families acros
 
 Webcam is used to capture the video and detect people in real-time. If people are very close to each other, a red bounding box is displayed around them indicating that they are not maintainting social distance.
 
-#Model
+# Model
 The MobileNet SSD model can detect 20 objects. The list of objects that can be detected can be found in the class_labels.txt file. You can also load any pre-trained model from Deep Learning frameworks like Caffe, Tensorflow, Torch and Darknet.
 
-#Method
+# Method
 Single Shot object Detection (SSD) using MobileNet and OpenCV were used to detect people. A bounding box is displayed around every person detected.
 
 To detect the distance of people from camera, triangle similarity technique was used. Let us assume that a person is at a distance D (in centimetres) from camera and the person's actual height is H (I have assumed that the average height of humans in 165 centimetres). Using the object detection code above, we can identify the pixcel height P of the person using the bounding box coordinates. Using these values, the focal length of the camera can be calculated using the below formula:
